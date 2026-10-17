@@ -43,6 +43,24 @@ dsh plugin --profile web update dsh-context@latest
 
 Then start the web UI with `dsh web`. No build step, no restart.
 
+### Install / Update from a DeepSeek Harness source checkout
+
+If you run DeepSeek Harness from source, run these commands in the `deepseek-harness` repository root to install the published `dsh-context` plugin into the `web` profile:
+
+```sh
+pnpm install
+pnpm build
+pnpm dsh plugin --profile web add dsh-context
+```
+
+Or update an already installed plugin:
+
+```sh
+pnpm dsh plugin --profile web update dsh-context@latest
+```
+
+Then start the web UI with `pnpm dsh web` from the same directory.
+
 ## Use it
 
 Five surfaces, one story — what your agent is carrying, how it got there, and what it did with it:

@@ -43,6 +43,24 @@ dsh plugin --profile web update dsh-context@latest
 
 然后使用 `dsh web` 启动 Web UI。无需构建，也无需重启。
 
+### 在 DeepSeek Harness 源码目录中安装 / 更新
+
+如果你从源码运行 DeepSeek Harness，请在 `deepseek-harness` 仓库根目录执行以下命令，将已发布的 `dsh-context` 插件安装到 `web` profile：
+
+```sh
+pnpm install
+pnpm build
+pnpm dsh plugin --profile web add dsh-context
+```
+
+或更新已安装的插件：
+
+```sh
+pnpm dsh plugin --profile web update dsh-context@latest
+```
+
+然后在同一目录使用 `pnpm dsh web` 启动 Web UI。
+
 ## 使用方法
 
 五种入口，讲述同一件事——你的 Agent 正在携带什么、它如何获得这些内容，以及它如何使用这些内容：
